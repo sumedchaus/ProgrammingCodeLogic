@@ -5,7 +5,7 @@ public class LogicExJava {
 
     void checkEvenOdd() {
         int number = 7;
-        if(number % 2 == 0){
+        if (number % 2 == 0) {
             System.out.println(number + " is even");
         } else {
             System.out.println(number + " is odd");
@@ -83,18 +83,78 @@ public class LogicExJava {
         return fact_number;
     }
 
+    void reverseNumber() {
+        int number = 123456;
+        int reverse_number = 0;
+        int remain = 0;
+
+        while (number != 0) {
+            remain = number % 10;
+            reverse_number = reverse_number * 10 + remain;
+            number = number / 10;
+        }
+        System.out.println(reverse_number);
+    }
+
+    void reverseString() {
+        String name = "Sumed";
+        String reverseName = "";
+        for (int i = (name.length() - 1); i >= 0; i--) {
+            reverseName = reverseName + name.charAt(i);
+        }
+        System.out.println(reverseName);
+    }
+
+    void primeNumber() {
+        int number = 7;
+        boolean flag = false;
+        for (int i = 2; i <= (number - 1); i++) {
+            if (number % i == 0) {
+                flag = true;
+                break;
+            }
+        }
+        if (flag == true) {
+            System.out.println(number + " number is not Prime");
+        } else {
+            System.out.println(number + " number is Prime");
+        }
+    }
+
+    void primeNumberUpto100() {
+        int temp = 0;
+        for (int i = 1; i<= 100; i++) {
+            temp = 0;
+            for (int j = 2; j<= (i-1); j++) {
+                if (i % j == 0) {
+                    temp = temp + 1;
+                }
+            }
+            if (temp == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+
 
     public static void main(String[] args) {
         LogicExJava logicExJava = new LogicExJava();
-        logicExJava.checkEvenOdd();
+//        logicExJava.checkEvenOdd();
 //        logicExJava.leapYearExample();
 //        logicExJava.swapNumber();
 //        logicExJava.swapNumber2();
 //        logicExJava.multiplicationTable();
 //    logicExJava.factorialNumber();
 //    logicExJava.factorialNumber2();
+
 //        logicExJava.factorialRecursion(5);
 //        System.out.println(logicExJava.fact_number);
+
+//        logicExJava.reverseNumber();
+//        logicExJava.reverseString();
+//        logicExJava.primeNumber();
+        logicExJava.primeNumberUpto100();
+
 
     }
 }

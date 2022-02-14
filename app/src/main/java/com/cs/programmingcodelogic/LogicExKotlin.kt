@@ -2,11 +2,11 @@ package com.cs.programmingcodelogic
 
 class LogicExKotlin {
 
-    fun checkEvenOdd(){
+    fun checkEvenOdd() {
         var number = 13
-        if(number % 2 == 0){
+        if (number % 2 == 0) {
             println("$number is even")
-        }else{
+        } else {
             println("$number is odd")
 
         }
@@ -40,9 +40,9 @@ class LogicExKotlin {
         var a = 80
         var b = 30
 
-        a = a+b
-        b = a-b
-        a = a-b
+        a = a + b
+        b = a - b
+        a = a - b
         println("value of a is $a")
         println("value of b is $b")
     }
@@ -64,6 +64,7 @@ class LogicExKotlin {
         }
         println("factorial number of $number is $fact_number")
     }
+
     // or
     fun factorialNumber2() {
         val number = 5
@@ -75,27 +76,74 @@ class LogicExKotlin {
     }
 
     var fact_number = 1
-    fun factorialRecursion(number : Int){
-        if(number >= 1){
+    fun factorialRecursion(number: Int) {
+        if (number >= 1) {
             fact_number = fact_number * number
-            factorialRecursion(number-1)
+            factorialRecursion(number - 1)
         }
+    }
 
+    fun reverseString() {
+        val name = "Sumed"
+        var reverseName = ""
+        for (i in (name.length - 1) downTo 0) {
+            reverseName = reverseName + name[i]
+        }
+        println(reverseName)
+    }
+
+    fun primeNumber() {
+        val number = 13
+        var flag = false
+        for (i in 2 until number) {
+            if (number % i == 0) {
+                flag = true
+                break
+            }
+        }
+        if (flag == true) {
+            println("$number number is not Prime")
+        } else {
+            println("$number number is Prime")
+        }
+    }
+
+    fun primeNumberUpto100() {
+        var temp = 0
+        for (i in 1..100) {
+            temp = 0
+            for (j in 2..(i - 1)) {
+                if (i % j == 0) {
+                    temp = temp + 1
+                }
+            }
+            if (temp == 0) {
+                println(i)
+            }
+
+        }
     }
 
 }
 
+
 fun main() {
     var logicEx = LogicExKotlin()
-    logicEx.checkEvenOdd()
+//    logicEx.checkEvenOdd()
 //    logicEx.leapYearExample()
 //    logicEx.swapNumber()
 //    logicEx.swapNumber2()
 //    logicEx.multiplicationTable()
 //    logicEx.factorialNumber()
 //    logicEx.factorialNumber2()
+
 //    logicEx.factorialRecursion(5)
 //    println(logicEx.fact_number)
+
+//    logicEx.reverseString()
+//    logicEx.primeNumber()
+    logicEx.primeNumberUpto100()
+
 
 
 }
