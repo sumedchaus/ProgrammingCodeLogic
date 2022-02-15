@@ -1,4 +1,4 @@
-package com.cs.programmingcodelogic;
+package com.cs.programmingcodelogic.logic_examples;
 
 public class LogicExJava {
 
@@ -123,9 +123,9 @@ public class LogicExJava {
 
     void primeNumberUpto100() {
         int temp = 0;
-        for (int i = 1; i<= 100; i++) {
+        for (int i = 1; i <= 100; i++) {
             temp = 0;
-            for (int j = 2; j<= (i-1); j++) {
+            for (int j = 2; j <= (i - 1); j++) {
                 if (i % j == 0) {
                     temp = temp + 1;
                 }
@@ -136,24 +136,65 @@ public class LogicExJava {
         }
     }
 
-    void fibonacciSeriesExample(){
+    void fibonacciSeriesExample() {
         int num1 = 0;
         int num2 = 1;
         int num3;
         int fibonacciNumber = 10;
-        System.out.print(num1+" "+num2);
+        System.out.print(num1 + " " + num2);
 
-        for (int i = 1; i<= fibonacciNumber; i++){
+        for (int i = 1; i <= fibonacciNumber; i++) {
             num3 = num1 + num2;
-            System.out.print(" "+num3);
+            System.out.print(" " + num3);
             num1 = num2;
             num2 = num3;
         }
     }
 
+    void palindromeNumber() {
+        int number = 152251;
+        int palindromeNumber = number;
+        int reverse_number = 0;
+        int remain = 0;
+
+        while (number != 0) {
+            remain = number % 10;
+            reverse_number = reverse_number * 10 + remain;
+            number = number / 10;
+        }
+        if (palindromeNumber == reverse_number) {
+            System.out.println("it is palindrome Number");
+        } else {
+            System.out.println("it's not palindrome Number");
+        }
+    }
+
+    void plusAllExample() {
+        int plusAll = 0;
+        int number = 5;
+        for (int i = 1; i <= number; i++) {
+            plusAll = plusAll + i;
+        }
+        System.out.println(plusAll);
+    }
+
+    void additionNumber() {
+        int number = 456;
+        int digit = 0;
+        int addition = 0;
+
+        for (int i = number; i >= 0; i--) {
+            digit = number % 10;
+            addition = digit + addition;
+            number = number / 10;
+        }
+        System.out.println(addition);
+    }
+
 
     public static void main(String[] args) {
         LogicExJava logicExJava = new LogicExJava();
+
 //        logicExJava.checkEvenOdd();
 //        logicExJava.leapYearExample();
 //        logicExJava.swapNumber();
@@ -169,7 +210,10 @@ public class LogicExJava {
 //        logicExJava.reverseString();
 //        logicExJava.primeNumber();
 //        logicExJava.primeNumberUpto100();
-        logicExJava.fibonacciSeriesExample();
+//        logicExJava.fibonacciSeriesExample();
+//        logicExJava.palindromeNumber();
+//        logicExJava.plusAllExample();
+//        logicExJava.additionNumber();
 
 
     }

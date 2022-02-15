@@ -1,4 +1,4 @@
-package com.cs.programmingcodelogic
+package com.cs.programmingcodelogic.logic_examples
 
 class LogicExKotlin {
 
@@ -138,12 +138,51 @@ class LogicExKotlin {
         }
     }
 
+    fun palindromeNumber() {
+        var number = 444
+        val palindromeNumber = number
+        var reverse_number = 0
+        var remain = 0
+        while (number != 0) {
+            remain = number % 10
+            reverse_number = reverse_number * 10 + remain
+            number = number / 10
+        }
+        if (palindromeNumber == reverse_number) {
+            println("it is palindrome Number")
+        } else {
+            println("it's not palindrome Number")
+        }
+    }
+
+    fun plusAllExample() {
+        var plusAll = 0
+        val number = 5
+        for (i in 1..number) {
+            plusAll = plusAll + i
+        }
+        println(plusAll)
+    }
+
+    fun additionOfNumberExample() {
+        println("input for add number")
+        var number = 456
+        var addition = 0
+        for (i in number downTo 1) {
+            var digit = number % 10
+            addition = addition + digit
+            number = number / 10
+        }
+        println("$addition")
+    }
 }
+
 
 
 fun main() {
     var logicEx = LogicExKotlin()
-//    logicEx.checkEvenOdd()
+
+    logicEx.checkEvenOdd()
 //    logicEx.leapYearExample()
 //    logicEx.swapNumber()
 //    logicEx.swapNumber2()
@@ -157,8 +196,9 @@ fun main() {
 //    logicEx.reverseString()
 //    logicEx.primeNumber()
 //    logicEx.primeNumberUpto100()
-    logicEx.fibonacciSeriesExample()
-
-
+//    logicEx.fibonacciSeriesExample()
+//    logicEx.palindromeNumber()
+//    logicEx.plusAllExample()
+//    logicEx.additionOfNumberExample()
 
 }
