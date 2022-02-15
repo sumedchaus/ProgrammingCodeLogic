@@ -1,4 +1,4 @@
-package com.cs.programmingcodelogic.star_examples;
+package com.cs.programmingcodelogic.star_pattern_examples;
 
 public class StarExJava {
     /**
