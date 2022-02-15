@@ -2,6 +2,19 @@ package com.cs.programmingcodelogic.logic_examples
 
 class LogicExKotlin {
 
+    fun largestNumber() {
+        val num1 = 20
+        val num2 = 40
+        val num3 = 10
+        if (num1 > num2 && num1 > num3) {
+            println("$num1 num1 number is greater")
+        } else if (num2 > num3) {
+            println("$num2 num2 number is greater")
+        } else {
+            println("$num3 num3 number is greater")
+        }
+    }
+
     fun checkEvenOdd() {
         var number = 13
         if (number % 2 == 0) {
@@ -182,7 +195,8 @@ class LogicExKotlin {
 fun main() {
     var logicEx = LogicExKotlin()
 
-    logicEx.checkEvenOdd()
+    logicEx.largestNumber()
+//    logicEx.checkEvenOdd()
 //    logicEx.leapYearExample()
 //    logicEx.swapNumber()
 //    logicEx.swapNumber2()

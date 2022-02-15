@@ -3,6 +3,21 @@ package com.cs.programmingcodelogic.logic_examples;
 public class LogicExJava {
 
 
+    void largestNumber() {
+        int num1 = 20;
+        int num2 = 40;
+        int num3 = 10;
+
+        if (num1 > num2 && num1 > num3) {
+            System.out.println(num1 + " num1 number is greater");
+        } else if (num2 > num3) {
+            System.out.println(num2 + " num2 number is greater");
+        } else {
+            System.out.println(num3 + " num3 number is greater");
+        }
+    }
+
+
     void checkEvenOdd() {
         int number = 7;
         if (number % 2 == 0) {
@@ -195,6 +210,7 @@ public class LogicExJava {
     public static void main(String[] args) {
         LogicExJava logicExJava = new LogicExJava();
 
+        logicExJava.largestNumber();
 //        logicExJava.checkEvenOdd();
 //        logicExJava.leapYearExample();
 //        logicExJava.swapNumber();
